@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" defer src="/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Vite App</title>
+  </head>
+  <body class="bg-slate-200">
+    <main class="main w-full h-full flex items-center flex-col gap-y-6">
+      <header class="title-head flex flex-col items-center pt-4">
+        <h1 class="text-line text-2xl font-semibold text-slate-700">
+          Our todo
+        </h1>
+        <div class="line w-full h-[3px]"></div>
+      </header>
+      <!-- input to add task -->
+      <div
+        class="add_task flex justify-center items-center h-[2.5rem] rounded-full overflow-hidden relative"
+      >
+        <input
+          type="text"
+          placeholder="add your task..."
+          class="add--todo w-[408px] h-full outline-none pl-3"
+          data-add_input
+        />
+        <button
+          class="add--btn flex justify-center items-center absolute right-0 h-full w-[6rem] rounded-full gap-x-[4px]"
+          data-add--todo_btn
+        >
+          Add
+          <i
+            ><img class="w-[1rem] h-[1rem]" src="./src/images/plus.svg" alt=""
+          /></i>
+        </button>
+      </div>
+      <!-- show tasks -->
+      <section class="all-todos pt-6">
+        <div class="main_todos_container">
+          <section class="todos_home flex flex-col gap-y-2" data-todos_parent>
+            <!-- each todo -->
+            <div
+              class="todo overflow-hidden flex min-w-[20rem] max-w-max h-[2rem] justify-between items-center"
+              data-todo_itself
+            >
+              <ul class="list">
+                <li class="list--items text-white text-sm">Design an app</li>
+              </ul>
+              <div class="actions--btns flex justify-end items-center">
+                <button
+                  class="complete w-[2rem] h-[2rem] flex justify-center items-center"
+                >
+                  <i>
+                    <img
+                      class="w-[1rem] h-[1rem]"
+                      src="./src/images/check.svg"
+                      alt="complete"
+                  /></i>
+                </button>
+                <button
+                  class="delete w-[2rem] h-[2rem] flex justify-center items-center"
+                >
+                  <i>
+                    <img
+                      class="w-[0.8rem] h-[0.8rem]"
+                      src="./src/images/trash.svg"
+                      alt="delete"
+                  /></i>
+                </button>
+                <button class="delete"></button>
+              </div>
+            </div>
+            <!-- each todo end -->
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
