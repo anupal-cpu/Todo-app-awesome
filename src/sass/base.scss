@@ -2,6 +2,12 @@ $primary-1: rgb(238, 77, 104);
 $primary-2: rgb(235, 166, 38);
 $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 
+.background-img {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/ash-from-modern-afflatus-NQ6Lh81BTRs-unsplash.jpg);
+}
+
 .line {
   background: $primary-2;
   border-radius: 2000px;
@@ -9,19 +15,24 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 
 .todo {
   padding-left: 8px;
-  // padding-right: 8px;
+
   border-radius: 4px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
   background: $Primary_gradient;
   .list--items {
     font-family: 'roboto', sans-serif;
   }
   .complete,
-  .delete {
+  .delete,
+  .complete-demo,
+  .delete-demo {
     background: blue;
     transition: transform 0.5s ease;
     border: none;
   }
-  .complete {
+  .complete,
+  .complete-demo {
     border-right: 1px solid $primary-2;
   }
 
@@ -42,6 +53,11 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
   }
 }
 
+.h-effect:hover {
+  transform: scaleX(1.1);
+  transition: 0.5s ease;
+}
+
 .add--btn {
   background: $Primary_gradient;
   color: white;
@@ -58,6 +74,7 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 
 .add--todo::placeholder {
   font-size: 16px;
+
   font-family: 'roboto', sans-serif;
 }
 
@@ -69,4 +86,51 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 12px 8px;
+}
+
+.svg {
+  pointer-events: none;
+}
+
+.more {
+  background-color: $primary-2;
+  color: white;
+  font-size: 15px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.more:hover {
+  color: rgb(212, 211, 211);
+}
+
+.more:active {
+  opacity: 0.9;
+}
+
+.add--todo {
+  padding-right: 6.3rem;
+  border-radius: 2345px;
+}
+
+.list {
+  pointer-events: none;
+  .list--items {
+    pointer-events: none;
+  }
+}
+
+.completed-todo {
+  opacity: 0.8;
+  text-decoration: line-through;
+}
+
+.add_task {
+  overflow: visible;
+}
+
+.add--todo:focus {
+  box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+  box-shadow: 0 0 5pt 2pt #d3d3d3;
 }
