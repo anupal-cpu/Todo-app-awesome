@@ -20,7 +20,7 @@ class TodoApp {
     // addTodo handler
     addTodoBtn.addEventListener('click', this.addTodo);
     // deleteTodo handler
-    todoParent.addEventListener('click', this.deleteTodo);
+    todoParent.addEventListener('click', this.deleteCompleteTodo);
 
     // show description handler
     todoParent.addEventListener('click', this.showDetails);
@@ -67,9 +67,9 @@ class TodoApp {
       todoParent.innerHTML += markup;
   }
 
-  // delete todo method
+  // delete and complete todo method
 
-  deleteTodo(e) {
+  deleteCompleteTodo(e) {
     const target = e.target;
     const targetParent = target.parentElement.parentElement;
     if (target.classList.contains('delete')) {
@@ -108,14 +108,6 @@ class TodoApp {
       modalTitle.innerHTML = titleTodo.innerHTML;
     }
   }
-
-  // remove modal method
-
-  removeModal() {
-    const overlay = document.querySelector('.overlay');
-  }
-
-  // task completed method
 }
 
 new TodoApp();
