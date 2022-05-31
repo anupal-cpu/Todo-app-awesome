@@ -2,6 +2,8 @@ import './src/css/style.css';
 import './src/sass/main.scss';
 import checkIcon from './src/images/check.svg';
 import trashIcon from './src/images/trash.svg';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 // selectors
 
