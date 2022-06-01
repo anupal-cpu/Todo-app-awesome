@@ -168,6 +168,13 @@ body::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.95);
 }
 
+.empty-msg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main_todos_container::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgb(190, 192, 192);
@@ -193,9 +200,12 @@ body::-webkit-scrollbar-thumb {
 
 .cross-parent {
   background-color: rgb(250, 73, 73);
-  // transform: rotate(45deg);
 }
 
 .delete:hover {
   opacity: 1;
+}
+
+.test {
+  resize: both;
 }
