@@ -2,10 +2,20 @@ $primary-1: rgb(238, 77, 104);
 $primary-2: rgb(235, 166, 38);
 $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 
+body::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(190, 192, 192);
+  border-radius: 10px;
+}
+
 .background-img {
   width: 100%;
-  height: 100vh;
-  background-image: url(../images/ash-from-modern-afflatus-NQ6Lh81BTRs-unsplash.jpg);
+  // height: 100vh;
+  // background-image: url(../images/ash-from-modern-afflatus-NQ6Lh81BTRs-unsplash.jpg);
 }
 
 .line {
@@ -54,7 +64,7 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 }
 
 .h-effect:hover {
-  transform: scaleX(1.1);
+  transform: scaleX(1.05);
   transition: 0.5s ease;
 }
 
@@ -102,7 +112,9 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 }
 
 .more:hover {
-  color: rgb(212, 211, 211);
+  background-color: transparent;
+  color: rgb(19, 19, 19);
+  border: 1px solid $primary-2;
 }
 
 .more:active {
@@ -122,7 +134,7 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 }
 
 .completed-todo {
-  opacity: 0.8;
+  opacity: 0.5;
   text-decoration: line-through;
 }
 
@@ -133,4 +145,57 @@ $Primary_gradient: linear-gradient(90deg, $primary-1, $primary-2);
 .add--todo:focus {
   box-shadow: 0 0 5pt 0.5pt #d3d3d3;
   box-shadow: 0 0 5pt 2pt #d3d3d3;
+}
+
+@media (max-width: 700px) {
+  .todos_home {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-width: max-content;
+    align-items: center;
+  }
+}
+
+@media (min-width: 700px) {
+}
+.main_todos_container::-webkit-scrollbar {
+  overflow: hidden;
+  width: 7px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  filter: blur();
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.main_todos_container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(190, 192, 192);
+}
+
+.error-msg {
+  color: rgb(231, 148, 148);
+}
+
+.error {
+  background-color: rgb(136, 2, 2);
+  border: 1px solid rgb(231, 148, 148);
+  display: flex;
+  align-items: center;
+  font-family: 'roboto', sans-serif;
+  font-size: 15px;
+  min-width: 20rem;
+  max-width: max-content;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+}
+
+.cross-parent {
+  background-color: rgb(250, 73, 73);
+  // transform: rotate(45deg);
+}
+
+.delete:hover {
+  opacity: 1;
 }

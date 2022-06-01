@@ -17,6 +17,7 @@
 .description-text {
   font-family: 'roboto', sans-serif;
   font-size: 15px;
+  word-wrap: break-word;
 }
 
 .des-modal {
@@ -39,4 +40,8 @@
   z-index: 4;
   opacity: 1;
   transition: opacity 1s ease;
+}
+
+.show-more {
+  height: max-content;
 }

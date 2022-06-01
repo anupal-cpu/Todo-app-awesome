@@ -5,12 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" defer src="/main.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <title>Vite App</title>
   </head>
   <body class="bg-slate-200">
@@ -51,50 +51,18 @@
       <!-- show tasks -->
       <section class="all-todos pt-6 w-full">
         <div class="background-img flex justify-center pt-4">
-          <div class="main_todos_container w-max h-max">
+          <div
+            class="main_todos_container min-w-[338px] min-h-[58px] w-max h-max max-h-[20.9rem] relative"
+          >
             <section
-              class="todos_home flex justify-between gap-x-6 flex-wrap gap-y-2 max-w-[42rem]"
+              class="todos_home flex justify-between gap-x-6 flex-wrap gap-y-2 max-w-[42rem] min-w-[100%] min-h-[100%]"
               data-todos_parent
-            >
-              <!-- each todo -->
-              <div
-                class="todo h-effect shadow-xl overflow-hidden flex min-w-[20rem] max-w-max h-[2rem] justify-between items-center"
-                data-todo_itself
-              >
-                <ul class="list">
-                  <li class="list--items text-white text-sm">
-                    This is just a demo task
-                  </li>
-                </ul>
-                <div class="actions--btns flex justify-end items-center">
-                  <button
-                    class="complete-demo w-[2rem] h-[2rem] flex justify-center items-center"
-                  >
-                    <i>
-                      <img
-                        class="w-[1rem] h-[1rem]"
-                        src="./src/images/check.svg"
-                        alt="complete"
-                    /></i>
-                  </button>
-                  <button
-                    class="delete-demo w-[2rem] h-[2rem] flex justify-center items-center"
-                  >
-                    <i>
-                      <img
-                        class="w-[0.8rem] h-[0.8rem]"
-                        src="./src/images/trash.svg"
-                        alt="delete"
-                    /></i>
-                  </button>
-                  <button class="delete"></button>
-                </div>
-              </div>
-              <!-- each todo end -->
-            </section>
+            ></section>
           </div>
         </div>
       </section>
+
+      <!-- description modal -->
       <section
         class="des-modal h-max pl-3 pt-2 w-[30rem] shadow-lg shadow-gray-800 opacity-0 rounded bg-white pb-3"
       >
@@ -108,15 +76,31 @@
           ></div>
         </header>
         <div class="actual--description pt-4">
-          <p class="description-text">
+          <p class="description-text h-[90px] overflow-hidden max-w-[465px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
             vero ad distinctio possimus nostrum ducimus, provident inventore quo
             harum blanditiis non sequi laboriosam repellendus perferendis
-            quisquam magni nihil! Illo, non?
+            quisquam magni nihil! Illo, non? Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Quis, reprehenderit! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quibusdam ea doloremque
+            laudantium ullam. Mollitia, veritatis!
           </p>
           <button class="more">Read more</button>
         </div>
       </section>
     </main>
+    <div class="error gap-x-2 px-3">
+      <div
+        class="cross-parent flex justify-center items-center rounded-full border-0 outline-none w-[1rem] h-[1rem]"
+      >
+        <img
+          class="err-img w-[0.8rem] h-[0.8rem] rotate-45"
+          src="./src/images/plus.svg"
+          alt=""
+        />
+      </div>
+
+      <p class="error-msg">Title is too long to render</p>
+    </div>
   </body>
 </html>
